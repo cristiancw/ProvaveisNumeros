@@ -4,7 +4,7 @@
               To include a user specific buildfile here, simply create one in the same
               directory with the processing instruction <?eclipse.ant.import?>
               as the first entry and export the buildfile again. -->
-<project basedir="." default="build" name="ProvaveisNumeros">
+<project xmlns:jacoco="antlib:org.jacoco.ant" basedir="." default="build" name="ProvaveisNumeros">
 	<property environment="env" />
 	<property name="ProvaveisNumerosApp.location" value="../ProvaveisNumerosApp" />
 	<property name="ECLIPSE_HOME" value="../../Eclipse" />
@@ -20,7 +20,7 @@
 		<pathelement location="libs/hamcrest-core-1.3.jar" />
 	</path>
 	<taskdef uri="antlib:org.jacoco.ant" resource="org/jacoco/ant/antlib.xml">
-		<classpath path="../lib/jacocoant.jar" />
+		<classpath path="lib/jacocoant.jar" />
 	</taskdef>
 	<target name="init">
 		<mkdir dir="bin" />
