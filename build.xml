@@ -70,11 +70,13 @@
     </target>
     <target name="AllTests">
         <mkdir dir="${junit.output.dir}"/>
+    	<jacoco:coverage>
         <junit fork="yes" printsummary="withOutAndErr">
             <formatter type="xml"/>
             <test name="br.com.AllTests" todir="${junit.output.dir}"/>
             <classpath refid="ProvaveisNumeros.classpath"/>
         </junit>
+    	</jacoco:coverage>
     </target>
     <target name="BuscaFrequencia_Test">
         <mkdir dir="${junit.output.dir}"/>
