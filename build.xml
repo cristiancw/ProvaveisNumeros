@@ -6,9 +6,9 @@
               as the first entry and export the buildfile again. -->
 <project basedir="." default="build" name="ProvaveisNumeros">
 	<property environment="env" />
-	<!--property name="Bibliotecas.location" value="../Bibliotecas" /-->
+	<!--<property name="Bibliotecas.location" value="../Bibliotecas" />-->
 	<property name="Bibliotecas.location" value="../../Bibliotecas/workspace" />
-	<property name="findbugs.home" value="${Bibliotecas.location}/lib/findbugs/findbugs-ant.jar" />
+	<!--<property name="findbugs.home" value="${Bibliotecas.location}/lib/findbugs/findbugs-ant.jar" />-->
 	<property name="ProvaveisNumerosApp.location" value="../ProvaveisNumerosApp" />
 	<property name="ECLIPSE_HOME" value="../../Eclipse" />
 	<property name="junit.output.dir" value="junit" />
