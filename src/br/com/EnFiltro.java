@@ -3,10 +3,9 @@ package br.com;
 import java.security.InvalidParameterException;
 
 /**
- * Define os tipos de filtros que o usu·rio pode escolher.
+ * Define os tipos de filtros que o usu√°rio pode escolher.
  * 
  * @author Cristian
- * 
  */
 public enum EnFiltro {
 	TUDO_ATE_HOJE(0), POR_ANO(1), PERIODO_DEFINIDO(2), NUMERO_CONCURSO(3);

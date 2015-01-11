@@ -120,7 +120,7 @@ public class Resultado implements Serializable {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("Número: ");
+		builder.append("NÃºmero: ");
 		builder.append(numero);
 		builder.append(" - ");
 		builder.append(data.getDayOfMonth());

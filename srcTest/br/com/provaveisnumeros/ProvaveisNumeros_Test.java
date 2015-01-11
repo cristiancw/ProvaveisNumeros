@@ -22,10 +22,10 @@ public class ProvaveisNumeros_Test {
 		ProvaveisNumeros provaveisNumeros = new ProvaveisNumeros(new ArrayList<Resultado>());
 		try {
 			provaveisNumeros.getNumerosFrequentes();
-			Assert.fail("Deveria ter gerado uma exceÁ„o");
+			Assert.fail("Deveria ter gerado uma exce√ß√£o");
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("… necess·rio carregar os dados antes de buscar sua frequencia.", e.getMessage());
+			Assert.assertEquals("√â necess√°rio carregar os dados antes de buscar sua frequ√™ncia.", e.getMessage());
 		}
 	}
 
@@ -61,10 +61,10 @@ public class ProvaveisNumeros_Test {
 		ProvaveisNumeros provaveisNumeros = new ProvaveisNumeros(new ArrayList<Resultado>());
 		try {
 			provaveisNumeros.getResultados();
-			Assert.fail("Deveria ter gerado uma exceÁ„o");
+			Assert.fail("Deveria ter gerado uma exce√ß√£o");
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("… necess·rio carregar os dados antes de buscar sua combinaÁ„o.", e.getMessage());
+			Assert.assertEquals("√â necess√°rio carregar os dados antes de buscar sua combina√ß√£o.", e.getMessage());
 		}
 	}
 
@@ -1067,10 +1067,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("A frequÍncia est· nula.", e.getMessage());
+			Assert.assertEquals("A frequ√™ncia est√° nula.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("A frequÍncia est· nula.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("A frequ√™ncia est√° nula.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1084,10 +1084,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("O ano informado È negativo: -10.", e.getMessage());
+			Assert.assertEquals("O ano informado √© negativo: -10.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("O ano informado È negativo: -10.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("O ano informado √© negativo: -10.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1101,10 +1101,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("O filtro informado È nulo.", e.getMessage());
+			Assert.assertEquals("O filtro informado √© nulo.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("O filtro informado È nulo.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("O filtro informado √© nulo.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1118,10 +1118,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("O filtro informado est· definido para filtrar por ano mas n„o existe um ano informado.", e.getMessage());
+			Assert.assertEquals("O filtro informado est√° definido para filtrar por ano mas n√£o existe um ano informado.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("O filtro informado est· definido para filtrar por ano mas n„o existe um ano informado.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("O filtro informado est√° definido para filtrar por ano mas n√£o existe um ano informado.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1135,10 +1135,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("O filtro informado est· definido por perÌodo mas a data inicial ou data final n„o foi informada.", e.getMessage());
+			Assert.assertEquals("O filtro informado est√° definido por per√≠odo mas a data inicial ou data final n√£o foi informada.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("O filtro informado est· definido por perÌodo mas a data inicial ou data final n„o foi informada.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("O filtro informado est√° definido por per√≠odo mas a data inicial ou data final n√£o foi informada.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1154,10 +1154,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("A data inicial È maior que data final.", e.getMessage());
+			Assert.assertEquals("A data inicial √© maior que data final.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("A data inicial È maior que data final.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("A data inicial √© maior que data final.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1168,7 +1168,7 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(null);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("O calculo n„o foi configurado corretamente.", e.getMessage());
+			Assert.assertEquals("O calculo n√£o foi configurado corretamente.", e.getMessage());
 		}
 	}
 
@@ -1184,10 +1184,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("Os n˙meros do intervalo entre concursos n„o pode ser negativo.", e.getMessage());
+			Assert.assertEquals("Os n√∫meros do intervalo entre concursos n√£o pode ser negativo.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("Os n˙meros do intervalo entre concursos n„o pode ser negativo.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("Os n√∫meros do intervalo entre concursos n√£o pode ser negativo.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1203,10 +1203,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("Os n˙meros do intervalo entre concursos n„o pode ser negativo.", e.getMessage());
+			Assert.assertEquals("Os n√∫meros do intervalo entre concursos n√£o pode ser negativo.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("Os n˙meros do intervalo entre concursos n„o pode ser negativo.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("Os n√∫meros do intervalo entre concursos n√£o pode ser negativo.", configuracao.getMotivoInvalido());
 		}
 	}
 
@@ -1222,10 +1222,10 @@ public class ProvaveisNumeros_Test {
 			provaveisNumeros.filtrar(configuracao);
 		} catch (Exception e) {
 			Assert.assertTrue(e instanceof IllegalStateException);
-			Assert.assertEquals("O n˙mero inicial do concurso n„o pode ser maior que o n˙mero fina.", e.getMessage());
+			Assert.assertEquals("O n√∫mero inicial do concurso n√£o pode ser maior que o n√∫mero final.", e.getMessage());
 
 			Assert.assertFalse(configuracao.isValido());
-			Assert.assertEquals("O n˙mero inicial do concurso n„o pode ser maior que o n˙mero fina.", configuracao.getMotivoInvalido());
+			Assert.assertEquals("O n√∫mero inicial do concurso n√£o pode ser maior que o n√∫mero final.", configuracao.getMotivoInvalido());
 		}
 	}
 }

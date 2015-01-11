@@ -31,7 +31,7 @@ public class CalcularOpcoes {
 
 		System.out.println("Existem " + executar.size() + " possibilidades.");
 		System.out.println(frequencia.toString() + ":" + provaveisNumeros.getNumerosFrequentes());
-		System.out.println("Elas s„o:");
+		System.out.println("Elas s√£o:");
 		for (Resultado resultado : executar) {
 			System.out.println(resultado);
 		}

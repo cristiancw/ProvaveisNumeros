@@ -22,7 +22,6 @@ import br.com.Resultado;
  * Faz o download do arquivo do site da caixa, descompacta o arquivo e faz o parser do arquivo html para uma lista de objetos {@link Resultado}.
  * 
  * @author Cristiancw
- * 
  */
 public class CarregarResultados {
 
@@ -44,10 +43,10 @@ public class CarregarResultados {
 	}
 
 	/**
-	 * Verifica se o arquivo com os resultados já foi carregado alguma vez. Quando for a primeira execução da aplicação, normalmente ele não vai estar carregado ainda e quando ocorrer uma falha ao
+	 * Verifica se o arquivo com os resultados jÃ¡ foi carregado alguma vez. Quando for a primeira execuÃ§o da aplicaÃ§Ã£o, normalmente ele nÃ£o vai estar carregado ainda e quando ocorrer uma falha ao
 	 * baixar o arquivo novo.
 	 * 
-	 * @return true se já foi criado alguma vez o arquivo
+	 * @return true se jÃ¡ foi criado alguma vez o arquivo
 	 */
 	public boolean isIniciado() {
 		return htmlFile.exists() && htmlFile.length() > 0;
@@ -78,7 +77,7 @@ public class CarregarResultados {
 	}
 
 	/**
-	 * Baixa um arquivo diretamente do site da caixa com a lista de todos os restultados mega sena e descompacta o resultado. Sempre mantém o último arquivo baixado e o último resultado descompactado.
+	 * Baixa um arquivo diretamente do site da caixa com a lista de todos os restultados mega sena e descompacta o resultado. Sempre mantÃ©m o Ãºltimo arquivo baixado e o Ãºltimo resultado descompactado.
 	 * 
 	 * @param zipFile
 	 * @param htmlFile
@@ -89,7 +88,7 @@ public class CarregarResultados {
 	public void baixar(File zipFile) throws IOException {
 		CookieHandler.setDefault(new CookieManager(null, CookiePolicy.ACCEPT_ALL));
 
-		// Configura conexão para baixar
+		// Configura conexÃ£o para baixar
 		URL url = new URL(SITE + ZIP_FILE);
 		URLConnection conn = url.openConnection();
 		conn.setReadTimeout(TIMEOUT);
@@ -141,7 +140,7 @@ public class CarregarResultados {
 	}
 
 	/**
-	 * Lê o arquivo passado que deve ser o mesmo carregado previamente pelo {@link #baixar(File, File)} e transforma cada linha de resultado em um objeto {@link Resultado}.
+	 * LÃª o arquivo passado que deve ser o mesmo carregado previamente pelo {@link #baixar(File, File)} e transforma cada linha de resultado em um objeto {@link Resultado}.
 	 * 
 	 * @param htmlFile
 	 * 
@@ -154,7 +153,7 @@ public class CarregarResultados {
 	}
 
 	/**
-	 * Verifica se já houve serialização da lista de resultados, para apenas carregar evitando fazer o parser mais de uma vez por troca de arquivo html com os resultados.
+	 * Verifica se jÃ¡ houve serializaÃ§Ã£o da lista de resultados, para apenas carregar evitando fazer o parser mais de uma vez por troca de arquivo html com os resultados.
 	 * 
 	 * @param cacheDir
 	 * @return <code>true</code> se existe cache
@@ -185,7 +184,7 @@ public class CarregarResultados {
 	}
 
 	/**
-	 * Lê o diretorio passado, que deve vir do cache do android com o arquivo "cache.dat" pronto para ser lido. Esse arquivo deve conter a lista de resultados baixada anteriormente.
+	 * LÃª o diretÃ³rio passado, que deve vir do cache do android com o arquivo "cache.dat" pronto para ser lido. Esse arquivo deve conter a lista de resultados baixada anteriormente.
 	 * 
 	 * @param cacheDir
 	 * @throws IOException

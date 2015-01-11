@@ -255,11 +255,11 @@ public class FiltrarResultados_Test {
 		FiltrarResultados filtrarResultados = new FiltrarResultados(getResultados());
 		try {
 			filtrarResultados.buscaDataAnterior(new LocalDate(1996, 3, 10));
-			Assert.fail("Deveria ter lançando InvalidParameterException");
+			Assert.fail("Deveria ter lanÃ§ando InvalidParameterException");
 		} catch (InvalidParameterException e) {
-			Assert.assertEquals("A data é menor que a data do primeiro concurso realizado. Dia: 10/03/1996", e.getMessage());
+			Assert.assertEquals("A data Ã© menor que a data do primeiro concurso realizado. Dia: 10/03/1996", e.getMessage());
 		} catch (Exception e) {
-			Assert.fail("Deveria ter lançando InvalidParameterException");
+			Assert.fail("Deveria ter lanÃ§ando InvalidParameterException");
 		}
 	}
 
@@ -313,11 +313,11 @@ public class FiltrarResultados_Test {
 		FiltrarResultados filtrarResultados = new FiltrarResultados(getResultados());
 		try {
 			filtrarResultados.buscaDataPosterior(new LocalDate(2013, 10, 12));
-			Assert.fail("Deveria ter lançando InvalidParameterException");
+			Assert.fail("Deveria ter lanÃ§ando InvalidParameterException");
 		} catch (InvalidParameterException e) {
-			Assert.assertEquals("A data é maior que a data do último concurso realizado. Dia: 12/10/2013", e.getMessage());
+			Assert.assertEquals("A data Ã© maior que a data do Ãºltimo concurso realizado. Dia: 12/10/2013", e.getMessage());
 		} catch (Exception e) {
-			Assert.fail("Deveria ter lançando InvalidParameterException");
+			Assert.fail("Deveria ter lanÃ§ando InvalidParameterException");
 		}
 	}
 

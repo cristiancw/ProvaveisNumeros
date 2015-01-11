@@ -5,7 +5,7 @@ import org.joda.time.format.DateTimeFormat;
 import org.joda.time.format.DateTimeFormatter;
 
 /**
- * Utilitarios.
+ * Utilit√°rios.
  * 
  * @author Cristiancw
  * 
@@ -15,7 +15,7 @@ public class Util {
 	private final static String DIA_MES_ANO_4 = "dd/MM/yyyy";
 
 	/**
-	 * Transforma um objeto LocalDate em uma String amigavÈl com o padr„o comum. Ex.: 01/01/2001.
+	 * Transforma um objeto <code>LocalDate</code> em uma <code>String</code> amigav√©l com o padr√£o comum. Ex.: 01/01/2001.
 	 * 
 	 * @param data
 	 * @return uma string com a data formatada
@@ -26,7 +26,7 @@ public class Util {
 	}
 
 	/**
-	 * Transforma os n˙meros passados em um objeto LocalDate em uma String amigavÈl com o padr„o comum. Ex.: 01/01/2001.
+	 * Transforma os n√∫meros passados em um objeto <code>LocalDate</code> em uma <code>String</code> amigav√©l com o padr√£o comum. Ex.: 01/01/2001.
 	 * 
 	 * @param dia
 	 * @param mes
@@ -40,7 +40,7 @@ public class Util {
 	}
 
 	/**
-	 * Transforma um objeto String no padr„o amigavel dd/MM/yyyy em um LocalDate.
+	 * Transforma um objeto <code>String</code> no padr√£o amigav√©l dd/MM/yyyy em um <code>LocalDate</code>.
 	 * 
 	 * @param data
 	 * @return um objeto LocalDate

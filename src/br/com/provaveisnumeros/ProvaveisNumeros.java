@@ -26,7 +26,7 @@ public class ProvaveisNumeros implements Serializable {
 
 	public void filtrar(Configuracao configuracao) {
 		if (configuracao == null) {
-			throw new IllegalStateException("O calculo n„o foi configurado corretamente.");
+			throw new IllegalStateException("O calculo n√£o foi configurado corretamente.");
 		}
 		if (!configuracao.isValido()) {
 			throw new IllegalStateException(configuracao.getMotivoInvalido());
@@ -59,7 +59,7 @@ public class ProvaveisNumeros implements Serializable {
 			numerosFrequentes = calculaResultadoProvavel.getMaisFrequentes();
 		}
 
-		// Calcular as combinaÁıes
+		// Calcular as combina√ß√µes
 		CalcularCombinacao calcularCombinacao = new CalcularCombinacao();
 		combinacoes = calcularCombinacao.calcular(numerosFrequentes);
 		numerosRandomicos.clear();
@@ -67,7 +67,7 @@ public class ProvaveisNumeros implements Serializable {
 
 	public List<Resultado> getResultados() {
 		if (combinacoes == null) {
-			throw new IllegalStateException("… necess·rio carregar os dados antes de buscar sua combinaÁ„o.");
+			throw new IllegalStateException("√â necess√°rio carregar os dados antes de buscar sua combina√ß√£o.");
 		}
 		return combinacoes;
 	}
@@ -84,7 +84,7 @@ public class ProvaveisNumeros implements Serializable {
 			}
 
 			if (resultados.size() == numerosRandomicos.size()) {
-				return null; // j· mostrou todas as possibilidades
+				return null; // j√° mostrou todas as possibilidades
 			}
 
 			return getResultadoAleatorio();
@@ -99,7 +99,7 @@ public class ProvaveisNumeros implements Serializable {
 
 	public List<Integer> getNumerosFrequentes() {
 		if (numerosFrequentes == null) {
-			throw new IllegalStateException("… necess·rio carregar os dados antes de buscar sua frequencia.");
+			throw new IllegalStateException("√â necess√°rio carregar os dados antes de buscar sua frequ√™ncia.");
 		}
 		return numerosFrequentes;
 	}

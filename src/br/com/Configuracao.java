@@ -3,10 +3,9 @@ package br.com;
 import org.joda.time.LocalDate;
 
 /**
- * Representa a configuração para executar o calculo, definindo os filtros necessários e a frequencia escolhida.
+ * Representa a configuraÃ§Ã£o para executar o cÃ¡lculo, definindo os filtros necessÃ¡rios e a frequÃªncia escolhida.
  * 
  * @author Cristian
- * 
  */
 public class Configuracao {
 
@@ -88,35 +87,35 @@ public class Configuracao {
 		motivoInvalido = null;
 		if (frequencia == null) {
 			isValido = false;
-			motivoInvalido = "A frequência está nula.";
+			motivoInvalido = "A frequÃªncia estÃ¡ nula.";
 
 		} else if (ano < 0) {
 			isValido = false;
-			motivoInvalido = "O ano informado é negativo: " + ano + ".";
+			motivoInvalido = "O ano informado Ã© negativo: " + ano + ".";
 
 		} else if (filtro == null) {
 			isValido = false;
-			motivoInvalido = "O filtro informado é nulo.";
+			motivoInvalido = "O filtro informado Ã© nulo.";
 
 		} else if (filtro == EnFiltro.POR_ANO && ano == 0) {
 			isValido = false;
-			motivoInvalido = "O filtro informado está definido para filtrar por ano mas não existe um ano informado.";
+			motivoInvalido = "O filtro informado estÃ¡ definido para filtrar por ano mas nÃ£o existe um ano informado.";
 
 		} else if (filtro == EnFiltro.PERIODO_DEFINIDO && (dataInicial == null || dataFinal == null)) {
 			isValido = false;
-			motivoInvalido = "O filtro informado está definido por período mas a data inicial ou data final não foi informada.";
+			motivoInvalido = "O filtro informado estÃ¡ definido por perÃ­odo mas a data inicial ou data final nÃ£o foi informada.";
 
 		} else if (filtro == EnFiltro.PERIODO_DEFINIDO && dataInicial.isAfter(dataFinal)) {
 			isValido = false;
-			motivoInvalido = "A data inicial é maior que data final.";
+			motivoInvalido = "A data inicial Ã© maior que data final.";
 
 		} else if (filtro == EnFiltro.NUMERO_CONCURSO && (concursoInicial < 0 || concursoFinal < 0)) {
 			isValido = false;
-			motivoInvalido = "Os números do intervalo entre concursos não pode ser negativo.";
+			motivoInvalido = "Os nÃºmeros do intervalo entre concursos nÃ£o pode ser negativo.";
 
 		} else if (filtro == EnFiltro.NUMERO_CONCURSO && concursoFinal < concursoInicial) {
 			isValido = false;
-			motivoInvalido = "O número inicial do concurso não pode ser maior que o número fina.";
+			motivoInvalido = "O nÃºmero inicial do concurso nÃ£o pode ser maior que o nÃºmero final.";
 		}
 		return isValido;
 	}

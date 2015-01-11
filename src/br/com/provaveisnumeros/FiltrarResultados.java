@@ -15,10 +15,9 @@ import br.com.Resultado;
 import br.com.Util;
 
 /**
- * Realiza o filtro conforme as combinações escolhidas pelo usuário. Pode filtrar todos os resultados por um determinado período, resultados de um ano.
+ * Realiza o filtro conforme as combinaÃ§Ãµes escolhidas pelo usuÃ¡rio. Pode filtrar todos os resultados por um determinado perÃ­odo, resultados de um ano.
  * 
  * @author Cristiancw
- * 
  */
 class FiltrarResultados implements Serializable {
 
@@ -74,18 +73,18 @@ class FiltrarResultados implements Serializable {
 	}
 
 	/**
-	 * Lista dos resultados entre um período de datas.
+	 * Lista dos resultados entre um perÃ­odo de datas.
 	 * 
 	 * @param inicio
 	 * @param fim
-	 * @return lista dos resultados entre um período de datas
+	 * @return lista dos resultados entre um perÃ­odo de datas
 	 */
 	List<Resultado> getResultados(LocalDate inicio, LocalDate fim) {
 		return new ArrayList<Resultado>(dataLista.subMap(inicio, true, fim, true).values());
 	}
 
 	/**
-	 * Lista dos resultados entre um período concursor baseado no número do concurso.
+	 * Lista dos resultados entre um perÃ­odo de concursos baseado no nÃºmero do concurso.
 	 * 
 	 * @param inicio
 	 * @param fim
@@ -93,9 +92,9 @@ class FiltrarResultados implements Serializable {
 	 */
 	List<Resultado> getResultados(int inicio, int fim) {
 		inicio--;
-		inicio = Math.max(inicio, 0); // não deixa ficar negatico
+		inicio = Math.max(inicio, 0); // nÃ£o deixa ficar negatico
 		fim = fim < inicio ? inicio : fim; // se fim for menor que inicio, considerar que o fim == inicio
-		fim = Math.min(fim, lista.size()); // não deixa ficar com valor acima do tamanho da lista
+		fim = Math.min(fim, lista.size()); // nÃ£o deixa ficar com valor acima do tamanho da lista
 
 		List<Resultado> resultados = new ArrayList<Resultado>(Math.max(fim - inicio, 1));
 		for (int i = inicio; i < fim; i++) {
@@ -116,7 +115,7 @@ class FiltrarResultados implements Serializable {
 	}
 
 	/**
-	 * Busca a data de um sorteio anterior a data passada, caso a data passada não caia exatamente em um dia de sorteio.
+	 * Busca a data de um sorteio anterior a data passada, caso a data passada nÃ£o caia exatamente em um dia de sorteio.
 	 * 
 	 * @param data
 	 * @return busca o sorteio anterior
@@ -124,7 +123,7 @@ class FiltrarResultados implements Serializable {
 	Resultado buscaDataAnterior(LocalDate data) {
 		Resultado resultado = lista.get(0);
 		if (data.compareTo(resultado.getData()) < 0) {
-			throw new InvalidParameterException("A data é menor que a data do primeiro concurso realizado. Dia: " + Util.format(data));
+			throw new InvalidParameterException("A data Ã© menor que a data do primeiro concurso realizado. Dia: " + Util.format(data));
 		}
 
 		if (hasSorteio(data)) {
@@ -134,15 +133,15 @@ class FiltrarResultados implements Serializable {
 	}
 
 	/**
-	 * Busca a próxima data de um sorteio, caso a data passada não caia exatamente em um dia de sorteio.
+	 * Busca a prÃ³xima data de um sorteio, caso a data passada nÃ£o caia exatamente em um dia de sorteio.
 	 * 
 	 * @param data
-	 * @return busca o próximo sorteio
+	 * @return busca o prÃ³ximo sorteio
 	 */
 	Resultado buscaDataPosterior(LocalDate data) {
 		Resultado resultado = lista.get(lista.size() - 1);
 		if (data.compareTo(resultado.getData()) > 0) {
-			throw new InvalidParameterException("A data é maior que a data do último concurso realizado. Dia: " + Util.format(data));
+			throw new InvalidParameterException("A data Ã© maior que a data do Ãºltimo concurso realizado. Dia: " + Util.format(data));
 		}
 
 		if (hasSorteio(data)) {

@@ -3,10 +3,9 @@ package br.com;
 import java.security.InvalidParameterException;
 
 /**
- * Define os tipos de frequencia que o usu�rio pode escolher.
+ * Define os tipos de frequência que o usuário pode escolher.
  * 
  * @author Cristian
- * 
  */
 public enum EnFrequencia {
 	MAIS_FREQUENTES(0), MENOS_FREQUENTES(1);

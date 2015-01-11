@@ -395,5 +395,4 @@ public class CalcularCombinacao_Test {
 		Assert.assertEquals(44, concurso.getQui_dezena());
 		Assert.assertEquals(55, concurso.getSex_dezena());
 	}
-
 }

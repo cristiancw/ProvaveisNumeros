@@ -7,19 +7,18 @@ import java.util.List;
 import br.com.Resultado;
 
 /**
- * Com base em uma lista de resultados préviamente filtrada separa os 6 resultados que mais apareceram e lista os valores que apareceram como sendo os próximos prováveis.
+ * Com base em uma lista de resultados prÃ©viamente filtrada separa os 6 resultados que mais apareceram e lista os valores que apareceram como sendo os prÃ³ximos provÃ¡veis.
  * 
  * @author Cristiancw
- * 
  */
 class BuscaFrequencia {
 
 	private final int[] contResultado;
-	private static final int TAMANHO_LISTA = 61; // posição 0 sempre deve ser 0
+	private static final int TAMANHO_LISTA = 61; // posiÃ§Ã£o 0 sempre deve ser 0
 	private static final int ITENS = 6;
 
 	/**
-	 * Recebe uma lista de resultados préviamente filtrados.
+	 * Recebe uma lista de resultados prÃ©viamente filtrados.
 	 * 
 	 * @param resultados
 	 */
@@ -28,7 +27,7 @@ class BuscaFrequencia {
 	}
 
 	/**
-	 * Dentre os valores filtrados passados no construtor, busca os números que mais aparecem. Caso os valores se repitam os resultados repetidos serão retornados.
+	 * Dentre os valores filtrados passados no construtor, busca os nÃºmeros que mais aparecem. Caso os valores se repitam os resultados repetidos serÃ£o retornados.
 	 * 
 	 * @return lista de valores que mais aparecem
 	 */
@@ -49,7 +48,7 @@ class BuscaFrequencia {
 		mais[4] = listaOrdenada[TAMANHO_LISTA - 5];
 		mais[5] = listaOrdenada[TAMANHO_LISTA - 6];
 
-		// busca suas posições na lista original
+		// busca suas posiÃ§Ãµes na lista original
 		List<Integer> maisFrequentes = new ArrayList<Integer>();
 		for (int i = 0; i < contResultado.length; i++) {
 			if (contResultado[i] == mais[0] && mais[0] > 0) {
@@ -71,7 +70,7 @@ class BuscaFrequencia {
 	}
 
 	/**
-	 * Dentre os valores filtrados passados no construtor, busca os números que menos aparecem. Caso os valores se repitam os resultados repetidos serão retornados.
+	 * Dentre os valores filtrados passados no construtor, busca os nÃºmeros que menos aparecem. Caso os valores se repitam os resultados repetidos serÃ£o retornados.
 	 * 
 	 * @return lista de valores que menos aparecem
 	 */
@@ -83,7 +82,7 @@ class BuscaFrequencia {
 		}
 		Arrays.sort(listaOrdenada);
 
-		// busca a primeira posição da lista com números maires que 0
+		// busca a primeira posiÃ§Ã£o da lista com nÃºmeros maires que 0
 		int pos = 0;
 		for (; pos < listaOrdenada.length; pos++) {
 			if (listaOrdenada[pos] > 0) {
@@ -91,7 +90,7 @@ class BuscaFrequencia {
 			}
 		}
 
-		// Quando não passou nada pelo filtro, por exemplo números de consursos que não existem ainda, datas que não existem ainda.
+		// Quando nÃ£o passou nada pelo filtro, por exemplo nÃºmeros de consursos que nÃ£o existem ainda, datas que nÃ£o existem ainda.
 		if (pos >= listaOrdenada.length) {
 			pos = 0;
 		}
@@ -105,7 +104,7 @@ class BuscaFrequencia {
 		mais[4] = listaOrdenada[pos++];
 		mais[5] = listaOrdenada[pos++];
 
-		// busca suas posições na lista original
+		// busca suas posiÃ§Ãµes na lista original
 		List<Integer> menosFrequentes = new ArrayList<Integer>();
 		for (int i = 0; i < contResultado.length; i++) {
 			if (contResultado[i] == mais[0] && mais[0] > 0) {
@@ -127,10 +126,10 @@ class BuscaFrequencia {
 	}
 
 	/**
-	 * Monta um array onde a posição dele é uma das 60 possibilidades do jogo e em cada posição a quantidade de vezes que o valor surgiu.
+	 * Monta um array onde a posiÃ§Ã£o dele Ã© uma das 60 possibilidades do jogo e em cada posiÃ§Ã£o a quantidade de vezes que o valor surgiu.
 	 * 
 	 * @param resultados
-	 * @return array de 60 posições com o valore de vezes em que cada número apareceu.
+	 * @return array de 60 posiÃ§Ãµes com o valore de vezes em que cada nÃºmero apareceu.
 	 */
 	private int[] montaContadorResultados(List<Resultado> resultados) {
 		int[] contador = new int[TAMANHO_LISTA];

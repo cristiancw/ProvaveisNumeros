@@ -19,7 +19,7 @@ public class CarregarResultados_Test {
 	public void testaDownloadArquivo() {
 		final String caminho = System.getProperty("user.dir") + "\\bin\\";
 
-		// Garante que n„o tem os arquivos
+		// Garante que n√£o tem os arquivos
 		File zipFile = new File(caminho + CarregarResultados.ZIP_FILE);
 		if (zipFile.exists()) {
 			zipFile.delete();
@@ -48,7 +48,7 @@ public class CarregarResultados_Test {
 	public void testaDownloadArquivoComLeitura() throws IOException {
 		final String caminho = System.getProperty("user.dir") + "\\bin\\";
 
-		// Garante que n„o tem os arquivos
+		// Garante que n√£o tem os arquivos
 		File zipFile = new File(caminho + CarregarResultados.ZIP_FILE);
 		if (zipFile.exists()) {
 			zipFile.delete();

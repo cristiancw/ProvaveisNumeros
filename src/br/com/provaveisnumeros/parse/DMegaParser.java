@@ -33,7 +33,7 @@ class DMegaParser {
 	private static final int SEXTA_DEZENA = 7;
 
 	/**
-	 * Carrega a lista de resultados convertendo o padr„o do html adotado para a estrutura de controle interno de objetos {@link Resultado}.
+	 * Carrega a lista de resultados convertendo o padr√£o do html adotado para a estrutura de controle interno de objetos {@link Resultado}.
 	 * 
 	 * @return retorna uma lista com os objetos carregados
 	 */

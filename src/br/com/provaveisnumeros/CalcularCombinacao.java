@@ -10,10 +10,9 @@ import org.joda.time.LocalDate;
 import br.com.Resultado;
 
 /**
- * Com a lista de números possivéis calcula todas a combinações de resultados que eles podem gerar.
+ * Com a lista de nÃºmeros possÃ­veis calcula todas a combinaÃ§Ãµes de resultados que eles podem gerar.
  * 
  * @author Cristiancw
- * 
  */
 class CalcularCombinacao {
 
@@ -24,7 +23,7 @@ class CalcularCombinacao {
 	}
 
 	/**
-	 * Calcula as combinações possiveis utilizando os números passados.
+	 * Calcula as combinaÃ§Ãµes possÃ­veis utilizando os nÃºmeros passados.
 	 * 
 	 * @param frequentes
 	 * @return lista de possiveis resultados.
@@ -98,7 +97,6 @@ class CalcularCombinacao {
 				return existe;
 			}
 		}
-
 		return false;
 	}
 }
